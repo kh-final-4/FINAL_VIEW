@@ -11,12 +11,12 @@
 }
 .sidebar_menu{
     display: none;
-    width: 30%;
+    width: 20%;
     height: 100%;
-    background: #DFCDBF;
+    background: whitesmoke;
     position: absolute;
     top:0;
-    right: -30%;
+    right: -20%;
     
 }
 .close_btn{
