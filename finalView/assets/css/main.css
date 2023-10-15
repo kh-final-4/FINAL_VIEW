@@ -533,6 +533,11 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   padding: 25px 0;
 }
 
+.top-header-area .header-a{
+  font-size: small;
+  text-align: right;
+}
+
 .top-header-area.white ul.navbar-nav li.nav-item a.nav-link, .top-header-area.white ul.navbar-nav li.nav-item.active a.nav-link {
   color: #fff;
 }
@@ -937,6 +942,10 @@ h2.widget-title:after {
 .copyright {
   background-color: #051922;
   border-top: 1px solid #232a35;
+}
+
+.copyright .copyright-etc :hover{
+  cursor: pointer;
 }
 
 .copyright p {
