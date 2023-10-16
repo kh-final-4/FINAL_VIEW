@@ -55,9 +55,7 @@ $(function(){
         let val = $(this).next().val()
         val++;
         $(this).next().val(val).trigger("change");
-        if($(this).parents("table").find(".basket_item").prop("checked")){
-            $(this).parents("table").find(".basket_item").trigger("change");
-        }
+        $(this).parents("table").find(".basket_item").trigger("change");
         
     })
     
@@ -66,29 +64,27 @@ $(function(){
         let val = $(this).prev().val()
         val--;
         $(this).prev().val(val).trigger("change");
-        if($(this).parents("table").find(".basket_item").prop("unchecked")){
-            totalPrice = 0;
-            $(this).parents("table").find(".basket_item").trigger("change");
-        }
+        $(this).parents("table").find(".basket_item").trigger("change");
     })
 
     // check 박스 클릭시
     $(".basket_item").change(function(){
+        console.log("zzz")
         var checked = $(this).prop('checked');
         let price = $(this).closest("table").find(".total").text().replace(/,/g, '');
         if(checked){
             $(this).closest("table").find("*").css("backgroundColor", "lightgray");
-            totalPrice += Number(price);
-            console.log(totalPrice)
-            var a1 = $(".total"); 
-            console.log(a1[1].innerHTML)
-
         }else{
             $(this).closest("table").find("*").css("backgroundColor", "whitesmoke");
-            totalPrice -= Number(price);
-            console.log(totalPrice)
         }
-        $(".finalTotal").text("총금액 : " + totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원")
+        let a1 = $(":checked").closest("table").find(".total"); 
+        let total = 0;
+        for (var i = 0; i <a1.length; i++) {
+            total += Number(a1[i].innerHTML.replace(/,/g, ''))
+            console.log(total)
+        }
+        totalPrice = total
+        $(".finalTotal").text("총금액 : " + total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원")
     })
 
 
