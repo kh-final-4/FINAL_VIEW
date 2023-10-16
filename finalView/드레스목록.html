@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>목록</title>
+	<title>드레스 목록</title>
 
 	<!-- 아이콘찾기 -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
@@ -34,6 +34,39 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<style>
+		#menu1{
+			/* border: 1px solid black; */
+			height: 300px;
+			width: 1100px;
+			float: left;
+		}
+		#menu2{
+			/* border: 1px solid black; */
+			float: left;
+			width: 20%;
+			height: 280px;
+		}
+		#menu3{
+			/* border: 1px solid black; */
+			float: left;
+			width: 60%;
+			height: 280px;
+		}
+		#menu4{
+			/* border: 1px solid black; */
+			float: left;
+			width: 20%;
+			height: 280px;
+		}
+
+		#menu5{
+			/* border: 1px solid black; */
+			height: 50px;
+		}
+
+	</style>
 
 </head>
 <body>
@@ -128,19 +161,53 @@
 	<div></div>
 
 	<!-- 목록시작 -->
+	<br>
 	<div class="latest-news mt-150 mb-150">
 		<div class="container">
+			<div id="menu5">
+				<div>
+					<button style="float: left; margin-left: 200px; height: 50px; width: 100px; border-radius: 15px;" class="btn btn-outline-info">웨딩홀</button> 
+					<button style="margin-left: 100px; height: 50px; width: 100px; border-radius: 15px;" class="btn btn-outline-info">스튜디오</button> 
+					<button style="margin-left: 100px; height: 50px; width: 100px; border-radius: 15px;" class="btn btn-outline-info">드레스</button> 
+					<button style="margin-left: 100px; height: 50px; width: 100px; border-radius: 15px;" class="btn btn-outline-info">메이크업</button>
+				</div>
+			</div>
+			<div align="center" id="menu1">
+				<div id="menu2">
+					<button style="width: 50px;height: 50px; margin-top: 110px;"><img src="../finalView/assets/img/latest-news/화살표2.png" style="width: 30px;"></button>
+				</div>
+				<div id="menu3">
+					<table align="center" style="margin-top: 80px;">
+						<tr>
+							<td>
+								<div style="float: left; width: 200px;">드레스 예약일</div> <input type="date"><br><br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div style="float: left; width: 200px;">검색해주세요.</div> <input type="text">
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="menu4">
+				<button style="width: 50px;height: 50px; margin-top: 110px;"><img src="../finalView/assets/img/latest-news/화살표.png"style="width: 30px;"></button>
+				</div>
+			</div>
+			<br>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">첫번째 제목</a></h3>
+							<h3><a href="single-news.html">첫번째 이름</a></h3>
+							<h3><a href="single-news.html">첫번째 주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+								<p class="excerpt">스튜디오 전화번호</p>
+								<p class="excerpt">스튜디오 상세설명</p>
+								<p class="excerpt">촬영 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
@@ -149,12 +216,14 @@
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">두번째제목</a></h3>
+							<h3><a href="single-news.html">두번째이름</a></h3>
+							<h3><a href="single-news.html">두번째주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+							<p class="excerpt">드레스 전화번호</p>
+							<p class="excerpt">드레스 상세설명</p>
+							<p class="excerpt">가격 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
@@ -163,12 +232,14 @@
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">세번째 제목</a></h3>
+							<h3><a href="single-news.html">세번째 이름</a></h3>
+							<h3><a href="single-news.html">세번째 주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+							<p class="excerpt">드레스 전화번호</p>
+							<p class="excerpt">드레스 상세설명</p>
+							<p class="excerpt">가격 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
@@ -177,12 +248,14 @@
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">네번째 제목</a></h3>
+							<h3><a href="single-news.html">네번째 이름</a></h3>
+							<h3><a href="single-news.html">세번째 주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+							<p class="excerpt">드레스 전화번호</p>
+							<p class="excerpt">드레스 상세설명</p>
+							<p class="excerpt">가격 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
@@ -191,12 +264,14 @@
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">다섯번째 제목</a></h3>
+							<h3><a href="single-news.html">다섯번째 이름</a></h3>
+							<h3><a href="single-news.html">다섯번째 주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+							<p class="excerpt">드레스 전화번호</p>
+							<p class="excerpt">드레스 상세설명</p>
+							<p class="excerpt">가격 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>
@@ -205,12 +280,14 @@
 					<div class="single-latest-news">
 						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
 						<div class="news-text-box">
-							<h3><a href="single-news.html">여섯번째 제목</a></h3>
+							<h3><a href="single-news.html">여섯번째 이름</a></h3>
+							<h3><a href="single-news.html">다섯번째 주소</a></h3>
 							<p class="blog-meta">
 								<span class="author"><i class="fas fa-user"></i> 관리자</span>
-								<span class="date"><i class="fas fa-calendar"></i> 날짜</span>
 							</p>
-							<p class="excerpt">내용</p>
+							<p class="excerpt">드레스 전화번호</p>
+							<p class="excerpt">드레스 상세설명</p>
+							<p class="excerpt">가격 : 70,000원</p>
 							<a href="single-news.html" class="read-more-btn">상세보기 <i class="fas fa-angle-right"></i></a>
 						</div>
 					</div>

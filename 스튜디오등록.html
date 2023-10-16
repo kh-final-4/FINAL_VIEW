@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .header{
+            width: 800px;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .content{
+            border: 1px solid black;
+            margin: auto;
+            height: 800px;
+            width: 800px;
+            border-radius: 50px;
+        }
+        #files1{
+            border: 1px solid black; 
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            border-radius: 80px;
+            margin:50px;
+            float: left;
+        }
+        #files2{
+            border: 1px solid black; 
+            width: 300px;
+            height: 150px;
+            border-radius: 80px;
+            margin: 50px;
+            float: left;
+        }
+        #files3{
+            border: 1px solid black; 
+            width: 300px;
+            height: 150px;
+            border-radius: 80px;
+            float: left;
+            margin: 50px;
+        }
+
+        #studio{
+            border: 1px solid black;
+            height: 680px;
+            width: 350px;
+            margin-left: 400px;
+            margin-top: 50px;
+            border-radius: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <thead>
+        <div class="header">
+            <fieldset style=" border-radius: 50px;">
+                <div align="center" style="float: left; margin-left: 110px;"><button class="btn btn-info">스튜디오 등록</button></div>
+                <div align="center" style="float: left; margin-left: 110px;"><button class="btn btn-info">드레스 등록</button></div>
+                <div align="center" style="float: left; margin-left: 110px;"><button class="btn btn-info">메이크업 등록</button></div>
+            </fieldset>
+        </div>
+    </thead>
+    <br><br>
+    <tbody>
+        <div class="content">
+            <div id="files1">
+                <input type="file" style="margin-top: 60px;">
+            </div>
+            <div id="files2">
+                <input type="file" style="margin-top: 60px;" >
+            </div>
+            <div id="files3">
+                <input type="file" style="margin-top: 60px;" >
+            </div>
+            <div id="studio">
+                <div align="center">
+                    <table style="margin-top: 30px;">
+                        <tr>
+                            <td>
+                                <p>업체명 : <input type="text"></p><br>
+                                <p>상세내용 : <textarea name="" id="" cols="20" rows="3"></textarea></p>
+                                <p>가격 : <input type="text" style="width: 170px;">원</p>
+                            </td>
+                        </tr>
+                    <table>
+                        <tr>
+                            <td>
+                               <p>영업 시작시간 : <input type="date"></p>
+                               <p>영업 종료시간 : <input type="date"></p> <br>
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                               <p>연락처 : <input type="text"></p><br>
+                               <p>주소 : <input type="text" style="width: 185px;"></p><br>
+                               <p>옵션 : 
+                                    <select style="width: 200px;">
+                                        <option value="1">옵션1</option>
+                                        <option value="2">옵션2</option>
+                                        <option value="3">옵션3</option>
+                                    </select>
+                                </p><br>
+                                예약시간 : <input type="time" style="width: 160px;">  <br><br><br>
+                                공휴일 & 주말 여부 = O<input type="radio" name="weekend"> X<input type="radio" name="weekend">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div align="center">태그 : <input type="text"></div>
+        </div>
+        <br><br>
+        <div id="button">
+                <div style="float: left; margin-left: 40%;"><button type="button" class="btn btn-primary">작성하기</button></div> 
+                <div style="margin-left:50%;"><button type="button" class="btn btn-danger">뒤로가기</button></div>
+        </div>
+    </tbody>
+</body>
+</html>
