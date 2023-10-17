@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Single News</title>
+	<title>상세페이지</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -30,6 +30,80 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
+
+	<style>
+		.slider{
+			width: 640px;
+			height: 480px;
+			position: relative;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.slider input[type=radio]{
+			display: none;
+		}
+
+		ul.imgs{
+			padding: 0;
+			margin: 0;
+		}
+		ul.imgs li{
+			position: absolute;
+			left: 640px;
+			transition-delay: 0.5s;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.bullets{
+			position: absolute;
+			left: 50%;
+			transform: translateX(0%);
+			bottom: 20px;
+			z-index: 2;
+		}
+		.bullets label{
+			display: inline-block;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,0.55);
+			width: 20px;
+			height: 20px;
+			cursor: pointer;
+		}
+
+		.slider input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
+			background-color: #fff;
+		}
+		.slider input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
+			background-color: #fff;
+		}
+		.slider input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
+			background-color: #fff;
+		}
+
+		.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+			left: 0;
+			transition: 1s;
+			z-index:2;
+		}
+		.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+			left: 0;
+			transition: 1s;
+			z-index:1;
+		}
+		.slider input[type=radio]:nth-child(3):checked~ul.imgs>li:nth-child(3){
+			left: 0;
+			transition: 1s;
+			z-index:1;
+		}
+
+		button{
+			border-radius: 10px;
+			width: 100px;
+			height: 50px;
+		}
+	</style>
 
 </head>
 <body>
@@ -129,8 +203,8 @@
 	</div>
 	<!-- end search arewa -->
 	
-	<!-- breadcrumb-section -->
-	<div class="breadcrumb-section breadcrumb-bg">
+	<!-- 위  헤더 -->
+	<!-- <div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
@@ -141,7 +215,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- end breadcrumb section -->
 	
 	<!-- single article section -->
@@ -151,36 +225,51 @@
 				<div class="col-lg-8">
 					<div class="single-article-section">
 						<div class="single-article-text">
-							<div class="single-artcile-bg"></div>
+							<div class="slider">
+								<input type="radio" name="slide" id="slide1" checked>
+								<input type="radio" name="slide" id="slide2">
+								<input type="radio" name="slide" id="slide3">
+								<input type="radio" name="slide" id="slide4">
+								<ul id="imgholder" class="imgs">
+									<li><img src="./assets/img/slide1.png"></li>
+									<li><img src="./assets/img/slide2.png"></li>
+									<li><img src="./assets/img/slide3.png"></li>
+								</ul>
+								<div class="bullets">
+									<label for="slide1">&nbsp;</label>
+									<label for="slide2">&nbsp;</label>
+									<label for="slide3">&nbsp;</label>
+								</div>
+							</div>
 							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
+								<span class="author"><i class="fas fa-user"></i> 관리자</span>
+								<span class="date"><i class="fas fa-calendar"></i> 2023-10-17</span>
 							</p>
-							<h2>Pomegranate can prevent heart disease</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint soluta, similique quidem fuga vel voluptates amet doloremque corrupti. Perferendis totam voluptates eius error fuga cupiditate dolorum? Adipisci mollitia quod labore aut natus nobis. Rerum perferendis, nobis hic adipisci vel inventore facilis rem illo, tenetur ipsa voluptate dolorem, cupiditate temporibus laudantium quidem recusandae expedita dicta cum eum. Quae laborum repellat a ut, voluptatum ipsa eum. Culpa fugiat minus laborum quia nam!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, praesentium, dicta. Dolorum inventore molestias velit possimus, dolore labore aliquam aperiam architecto quo reprehenderit excepturi ipsum ipsam accusantium nobis ducimus laudantium.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum est aperiam voluptatum id cupiditate quae corporis ex. Molestias modi mollitia neque magni voluptatum, omnis repudiandae aliquam quae veniam error! Eligendi distinctio, ab eius iure atque ducimus id deleniti, vel alias sint similique perspiciatis saepe necessitatibus non eveniet, quo nisi soluta.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt beatae nemo quaerat, doloribus obcaecati odio!</p>
+							<h2>웨딩홀 이름</h2>
+							<p>내용</p>
+							<p>내용</p>
+							<p>내용</p>
+							<p>내용</p>
 						</div>
 
 						<div class="comments-list-wrap">
-							<h3 class="comment-count-title">3 Comments</h3>
+							<h3 class="comment-count-title">3개의 댓글</h3>
 							<div class="comment-list">
 								<div class="single-comment-body">
 									<div class="comment-user-avater">
 										<img src="assets/img/avaters/avatar1.png" alt="">
 									</div>
 									<div class="comment-text-body">
-										<h4>Jenny Joe <span class="comment-date">Aprl 26, 2020</span> <a href="#">reply</a></h4>
-										<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
+										<h4>양관우<span class="comment-date">2023-10-17</span> <a href="#">reply</a></h4>
+										<p>정말 좋아요</p>
 									</div>
 									<div class="single-comment-body child">
 										<div class="comment-user-avater">
 											<img src="assets/img/avaters/avatar3.png" alt="">
 										</div>
 										<div class="comment-text-body">
-											<h4>Simon Soe <span class="comment-date">Aprl 27, 2020</span> <a href="#">reply</a></h4>
-											<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
+											<h4>윤재성<span class="comment-date">2023-10-17</span> <a href="#">reply</a></h4>
+											<p>풉 ㅋ</p>
 										</div>
 									</div>
 								</div>
@@ -189,23 +278,23 @@
 										<img src="assets/img/avaters/avatar2.png" alt="">
 									</div>
 									<div class="comment-text-body">
-										<h4>Addy Aoe <span class="comment-date">May 12, 2020</span> <a href="#">reply</a></h4>
-										<p>Nunc risus ex, tempus quis purus ac, tempor consequat ex. Vivamus sem magna, maximus at est id, maximus aliquet nunc. Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus Suspendisse lacinia velit a eros porttitor, in interdum ante faucibus.</p>
+										<h4>이원종<span class="comment-date">2023-10-17</span> <a href="#">reply</a></h4>
+										<p>누가 기침소리를 내었는가?</p>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="comment-template">
-							<h4>Leave a comment</h4>
-							<p>If you have a comment dont feel hesitate to send us your opinion.</p>
-							<form action="index.html">
+							<h4>댓글 작성</h4>
+							<p>댓글 작성은 주저말고 작성해주세요^_^</p>
+							<form action="#">
 								<p>
-									<input type="text" placeholder="Your Name">
-									<input type="email" placeholder="Your Email">
+									<input type="text" placeholder="이름">
+									<input type="email" placeholder="이메일">
 								</p>
-								<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="Your Message"></textarea></p>
-								<p><input type="submit" value="Submit"></p>
+								<p><textarea name="comment" id="comment" cols="30" rows="10" placeholder="내용"></textarea></p>
+								<p><input type="submit" value="작성"></p>
 							</form>
 						</div>
 					</div>
@@ -213,34 +302,32 @@
 				<div class="col-lg-4">
 					<div class="sidebar-section">
 						<div class="recent-posts">
-							<h4>Recent Posts</h4>
+							<h4>최근 본 게시글</h4>
 							<ul>
-								<li><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></li>
-								<li><a href="single-news.html">A man's worth has its season, like tomato.</a></li>
-								<li><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></li>
-								<li><a href="single-news.html">Fall in love with the fresh orange</a></li>
-								<li><a href="single-news.html">Why the berries always look delecious</a></li>
+								<li><a href="single-news.html">kh양관우교육원 - sinse 2023 - 10 - 17 </a></li>
+								<li><a href="single-news.html">kh윤재성교육원 - sinse 2023 - 10 - 17</a></li>
+								<li><a href="single-news.html">kh이원종교육원 - sinse 2023 - 10 - 17</a></li>
+								<li><a href="single-news.html">kh김현우교육원 - sinse 2023 - 10 - 17</a></li>
+								<li><a href="single-news.html">kh김시연교육원 - sinse 2023 - 10 - 17</a></li>
 							</ul>
+							<hr>
 						</div>
 						<div class="archive-posts">
-							<h4>Archive Posts</h4>
-							<ul>
-								<li><a href="single-news.html">JAN 2019 (5)</a></li>
-								<li><a href="single-news.html">FEB 2019 (3)</a></li>
-								<li><a href="single-news.html">MAY 2019 (4)</a></li>
-								<li><a href="single-news.html">SEP 2019 (4)</a></li>
-								<li><a href="single-news.html">DEC 2019 (3)</a></li>
-							</ul>
+							<h4>웨딩홀 이름</h4>
+							<p>웨딩홀 주소 : <input type="text" disabled></p>
+							<p>웨딩홀 전화번호 : <input type="text" disabled></p>
+							<p><textarea name="" id="" cols="30" rows="10">웨딩홀 설명</textarea></p>
+							<button style="margin: 30px;">장바구니</button> <button style="margin: 10px;">예약하기</button>
 						</div>
 						<div class="tag-section">
-							<h4>Tags</h4>
+							<h4>태그</h4>
 							<ul>
-								<li><a href="single-news.html">Apple</a></li>
-								<li><a href="single-news.html">Strawberry</a></li>
-								<li><a href="single-news.html">BErry</a></li>
-								<li><a href="single-news.html">Orange</a></li>
-								<li><a href="single-news.html">Lemon</a></li>
-								<li><a href="single-news.html">Banana</a></li>
+								<li><a href="single-news.html">웨딩홀</a></li>
+								<li><a href="single-news.html">이쁜가?</a></li>
+								<li><a href="single-news.html">누가?</a></li>
+								<li><a href="single-news.html">너가~?</a></li>
+								<li><a href="single-news.html">핱으</a></li>
+								<li><a href="single-news.html">사랑</a></li>
 							</ul>
 						</div>
 					</div>
