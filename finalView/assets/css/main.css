@@ -1185,6 +1185,8 @@ input[type="submit"] {
   -o-transition: 0.3s;
   transition: 0.3s;
   border-radius: 50px !important;
+  background-color: #F28123;
+  color: black;
 }
 
 input[type="submit"]:hover {
@@ -1192,6 +1194,38 @@ input[type="submit"]:hover {
   color: #F28123;
 }
 
+input[type="checkbox"]{
+  width: 18px; 
+  height: 17px;
+}
+
+button[type="button"]{
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50px !important;
+  background-color: #F28123;
+  color: black;
+  border: none;
+}
+
+button[type="button"]:hover {
+  background-color: #051922;
+  color: #F28123;
+}
+
+button[id="delete"] {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 25px !important;
+  border: none;
+}
+
+button[id="delete"]:hover {
+  background-color: red;
+  color: #fff;
+}
 div.owl-controls, .owl-controls div {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -1796,6 +1830,7 @@ p.excerpt {
 .comment-text-body {
   padding-left: 80px;
   margin-bottom: 40px;
+  padding-left: 0px;
 }
 
 .comment-text-body h4 {
@@ -1807,7 +1842,6 @@ span.comment-date {
   opacity: 0.5;
   font-size: 80%;
   font-weight: 700;
-  margin-left: 5px;
 }
 
 .comment-text-body h4 a {

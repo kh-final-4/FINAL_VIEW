@@ -267,7 +267,7 @@
                <form action="#">
                     <table border="0">
                         <tr>
-                            <th><input type="checkbox" name="all"></th>
+                            <th><input type="checkbox" id="selectAll"></th>
                             <th>상품명</th>
                             <th>판매가</th>
                             <th>금액</th>
@@ -276,7 +276,7 @@
                             <td colspan="7">장바구니에 상품이 없습니다.</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="1"></td>
+                            <td><input type="checkbox" name="basketno"></td>
                             <td><article>
                                 <a href="#">
                                     <img src="	https://via.placeholder.com/80x80" alt="1">
@@ -290,7 +290,7 @@
                             <td>27,000</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="1"></td>
+                            <td><input type="checkbox" name="basketno"></td>
                             <td><article>
                                 <a href="#">
                                     <img src="	https://via.placeholder.com/80x80" alt="1">
@@ -304,7 +304,7 @@
                             <td>27,000</td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="1"></td>
+                            <td><input type="checkbox" name="basketno"></td>
                             <td><article>
                                 <a href="#">
                                     <img src="	https://via.placeholder.com/80x80" alt="1">
@@ -317,14 +317,53 @@
                             <td>27,000</td>
                             <td>27,000</td>
                         </tr>
-                    </table>
-                    <input type="button" name="del" value="선택삭제">
+                    </table> <br>
+                    <button type="button" id="delete" value="선택삭제" style="width: 60px; height: 50px; border-radius: 15px; margin-left: 280px;">삭제</button>
                     <input type="submit" name="submit" value="예약하기" style="float: right; margin: 10px; margin-right: 280px;" >
                </form>
             </section>
         </main>
        <br>
     </div>
+
+    <script>
+        $(function(){
+            $("#selectAll").click(function(){
+                   if($(this).is(':checked')){
+                       $("input[name=basketno]").prop("checked",true);
+                   }else{
+                       $("input[name=basketno]").prop("checked",false);
+                   }
+            })
+
+            $("#delete").click(function(){
+                let checkBoxArr = [];
+                if(confirm("쿠폰을 삭제하시겠습니까?")){
+                    
+                    $("input:checkbox[name=basketno]:checked").each(function(){
+                        checkBoxArr.push($(this).val());
+                    })
+                    
+                    $.ajax({
+                        url:"#",
+                        traditional: true,
+                        data:{arr:checkBoxArr},
+                        success:function(result){
+                            document.location.href = document.location.href;
+                        },
+                        error:function(){
+                            console.log("삭제 오류")
+                        }
+                    })
+                }
+            })
+            
+            $("input[type='submit']").click(function(){
+                 document.location.href = document.location.href;
+            })
+        })
+        
+      </script>
 
     <!-- 푸터바  인클루드-->
 	<!-- footer -->

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>답례품장바구니</title>
+    <title>좋아요</title>
 </head>
 <body>
     <!DOCTYPE html>
@@ -15,9 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <!-- 아이콘찾기 -->
 	<link rel="stylesheet" href="assets/css/all.min.css">
 	<!-- 부트스트랩 -->
@@ -45,131 +42,9 @@
 	<link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
-        #product > .cart > form > table {
-            width: 100%;
-            border-bottom: 1px solid #d3d3d3;
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        #product > .cart > form > table tr { border-bottom: 1px solid #d3d3d3 ;}
-
-        #product > .cart > form > table th:first-child {width: 80px;}
-
-        #product > .cart > form > table th {
-            padding: 12px 0;
-            border-top: 2px solid #000;
-            border-bottom: 1px solid #d3d3d3;
-            background: #fff;
-            color: #383838;
-            font-size: 0.95em;
-            text-align: center;
-            letter-spacing: -0.1em;
-        }
-
-        #product > .cart > form > table .empty { display: none ;}
-
-        #product > .cart > form > table td { text-align: center;}
-
-        #product > .cart > form > table td:last-child {
-            color: #ff006c;
-            font-weight: bold;
-        }
-
-        #product > .cart > form > table td > article {
-            padding: 6px;
-            overflow: hidden;
-        }
-
-        #product > .cart > form > table td > article > a {
-            float: left;
-        }
-
-        #product > .cart > form > table td > article > a > img { width: 80px;}
-
-        #product > .cart > form > table td > article > div {
-            float: left;
-            margin-left: 10px;
-        }
-
-        #product > .cart > form > table td > article > div > h2 { text-align: left; }
-
-        #product > .cart > form > table td > article > div > p {
-            text-align: left;
-            color: #777;
-            margin-top: 4px;
-        }
-
-        #product > .cart > form > input[name=del] {
-            border-color: #bdbdbd;
-            border-bottom-color: #828282;
-            background: #fafafa;
-            color: #4d4d4d;
-            padding: 6px 11px;
-            border-width: 1px;
-            margin-top: 6px;
-            border-radius: 15px;
-        }
-
-        #product > .cart > form > .total {
-            float: right;
-            width: 800px;
-            height: 412px;
-            padding: 20px;
-            margin-top: 12px;
-            background: #fff;
-            border: 1px solid #d3d3d3;
-            box-sizing: border-box;
-        }
-
-        #product > .cart > form > .total > h2 {
-            width: 100%;
-            font-weight: bold;
-            font-size: 16px;
-            border-bottom: 1px solid #111;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            box-sizing: border-box;
-            color: #1e1e1e;
-        }
-
-        #product > .cart > form > .total > table { width: 100%; }
-
-        #product > .cart > form > .total > table tr:nth-last-child(1) td {
-            font-size: 20px;
-        }
-
-        #product > .cart > form > .total > table tr:nth-last-child(1) td:last-child {
-            color: #ff006c;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        #product > .cart > form > .total > table td {
-            padding: 10px 0;
-            font-size: 14px;
-            color: #555;
-        }
-
-        #product > .cart > form > .total > table td:last-child { text-align: right; }
-
-        #product > .cart > form > .total > input[type=submit] {
-            width: 100%;
-            height: 80px;
-            font-size: 30px;
-            border-width: 1px;
-            border-color: #d81818;
-            border-bottom-color: #9e1212;
-            background: #ed2f2f;
-            background-image: -webkit-linear-gradient(#ed2f2f, #dd0e0e);
-            color: #fff;
-            box-sizing: border-box;
-            margin-top: 40px;
-        }
-
        /* 카테고리 */
        main {
-            width: 1200px;
+            width: 1000px;
             height: auto;
             margin: 0 auto;
             overflow: hidden;
@@ -186,20 +61,18 @@
             width: 100%;
             height: 600px;
             background: #333949;
-            margin-top: 80px;
+            margin-top: 0px;
         }
 
         main > aside > .category > li {
             width: 100%;
-            height: 80px;
             line-height: 50px;
             color: #ccc;
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
             border-bottom: 1px solid #2b313f;
             box-sizing: border-box;
         }
-
 
         main > aside > .category > li > a {
             display: block;
@@ -209,52 +82,11 @@
             font-weight: bold;
             text-decoration: none;
             font-size: 1em;
-        }
+        }   
 
         main > aside > .category > li > a:hover {
             background: #F28123;
             color: #fff;
-        }
-
-        main > aside > .category > li > a:hover + ol {
-            display: block;
-        }
-
-        main > aside > .category ol:hover {
-            display: block;
-        }   
-
-        main > aside > .category i {
-            width: 22px;
-            font-size: 16px;
-            margin-right: 12px;
-        }
-
-        main > aside > .category > li i.fa-angle-right{
-            float: right;
-            width: auto;
-            margin-right: 0;
-        }
-
-        main > aside > .category ol {
-            position: absolute;
-            left: 215px;
-            top: 0;
-            display: none;
-            width: 220px;
-            height: 100%;
-            border: 1px solid #787f89;
-            background: #fff;
-            box-sizing: border-box;
-            z-index: 10000;
-        }
-
-        main > aside > .category ol > li {
-            width: 100%;
-            height: 80px;
-            padding: 10px;
-            box-sizing: border-box;
-            margin-top: 60px;
         }
 
         main > section {
@@ -266,20 +98,29 @@
 
         /*탭메뉴 체크*/
         ul.category li.current{
-            background: #ededed;
+            background: lightgray;
             color: #222;
         }
 
         .tab-content{
             display: none;
-            background: #ededed;
+            background: #F28123;
             padding: 15px;
         }
 
-        #pay-go :hover{
-            background-color: #F28123;
+        /*쿠폰*/
+        #main{
+            margin-left: 300px;
+            margin-top: 30px;
         }
 
+        thead th{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        tbody td{
+            border-bottom: 1px solid lightgray;
+        }
     </style>
 </head>
 <body>
@@ -349,119 +190,115 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
-    <br><br><br><br><br>
+    <br><br><br><br><br><br>
 	<!-- end header -->
     <div id="wrapper">
     
         <main id="product">
-            <section class="cart">
-                <nav>
-                    <h3>답례품 장바구니</h3>
-                    <br>
-                </nav>
-               <form action="#">
-                    <table border="0">
+            <aside>
+                <ul class="category">
+                    <li>
+                        <i class="fa fa-bars"></i>마이페이지
+                    </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home"data-tab="tab-1"> </i> 쇼핑
+                                </i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">주문목록 / 배송조회</a>
+                                </li>
+                                <li>
+                                    <a href="#">상담예약 확인목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-laptop" data-tab="tab-2"></i> my 혜택
+                                </i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">쿠폰 보유내역</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-utensils" data-tab="tab-4"></i> my정보
+                                </i>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="#">내정보조회</a>
+                                </li>
+                            </ul>
+                        </li>
+                </ul>
+            </aside>
+            <div id="main" class="cont">
+                <h3>좋아요목록</h3>
+                <br>
+                <table>
+                    <thead align="center">
                         <tr>
-                            <th><input type="checkbox" id="selectAll" ></th>
-                            <th>상품명</th>
-                            <th>총수량</th>
-                            <th>판매가</th>
-                            <th>금액</th>
+                            <th width="128" height="40"><input type="checkbox" id="selectAll"></th>
+                            <th width="200">이름</th>
+                            <th width="150">주소</th>
+                            <th width="150">전화번호</th>
+                            <th width="300">금액</th>
                         </tr>
-                        <tr class="empty">
-                            <td colspan="7">장바구니에 상품이 없습니다.</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name=giftno></td>
-                            <td><article>
-                                <a href="#">
-                                    <img src="	https://via.placeholder.com/80x80" alt="1">
-                                </a>
-                                <div>
-                                    <h4><a href="#">답례품</a></h4>
-                                    <p>상품설명</p>
-                                </div>
-                            </article></td>
-                            <td>1</td>
-                            <td>27,000</td>
-                            <td>27,000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name=giftno></td>
-                            <td><article>
-                                <a href="#">
-                                    <img src="	https://via.placeholder.com/80x80" alt="1">
-                                </a>
-                                <div>
-                                    <h4><a href="#">답례품</a></h4>
-                                    <p>상품설명</p>
-                                </div>
-                            </article></td>
-                            <td>1</td>
-                            <td>27,000</td>
-                            <td>27,000</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name=giftno></td>
-                            <td><article>
-                                <a href="#">
-                                    <img src="	https://via.placeholder.com/80x80" alt="1">
-                                </a>
-                                <div>
-                                    <h4><a href="#">답례품</a></h4>
-                                    <p>상품설명</p>
-                                </div>
-                            </article></td>
-                            <td>1</td>
-                            <td>27,000</td>
-                            <td>27,000</td>
-                        </tr>
-                    </table>
-                    <br>  &nbsp;
-                    <button type="button" id="delete" value="선택삭제" style="width: 60px; height: 50px; border-radius: 15px;">삭제</button>
-                    <div class="total">
-                        <h2>총 금액</h2>
-                        <table>
-                            <tr>
-                                <td>답례품 </td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>총 금액</td>
-                                <td>27,000</td>
-                            </tr>
-                            <tr>
-                                <td>할인금액</td>
-                                <td>-1,000</td>
-                            </tr>
-                            <tr>
-                                <td>전체주문금액</td>
-                                <td>26,000</td>
-                            </tr>
-                        </table>
-                        <br>
-                        <button type="button" id="paygo" style="font-size: 30px; width: 760px; height: 80px;">주문하기</button>
-                    </div>
-               </form>
-            </section>
-        </main>
-       
+                    </thead>
+                    <tbody align="center">
+                    <!-- 
+                        <% if(list.isEmpty()){ %>
+                        <% }else{ %>
+                            <% for(Board b : list){ %> -->
+                                <tr class="wishList">
+                                    <td height="100" onclick=""><input type="checkbox" name="cpno" value=""></td>
+                                    <td>웨딩홀</td>
+                                    <td>주소</td>
+                                    <td>전화번호</td>
+                                    <td ><h4 style="color: #ff006c;">10000</h4></td> 
+                                </tr>
+                                <tr class="wishList">
+                                    <td height="100" onclick=""><input type="checkbox" name="cpno" value=""></td>
+                                    <td>스&드&메</td>
+                                    <td>주소</td>
+                                    <td>전화번호</td>
+                                    <td ><h4 style="color: #ff006c;">100000</h4></td>
+                                </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div  class="CPbutton"> &nbsp;  &nbsp;  
+                    <button type="button" id="delete" style="border-radius: 10px; background-color: red; width: 80px; height: 50px;">삭제하기</button>
+                    <button type="button" id="basket-go" style="float: right; border-radius: 10px; width: 150px; height: 50px;">장바구니담기</button>
+                </div>
+            </div>
+            
+           
+        </div>
+    
         <script>
             $(function(){
                 $("#selectAll").click(function(){
                        if($(this).is(':checked')){
-                           $("input[name=giftno]").prop("checked",true);
+                           $("input[name=cpno]").prop("checked",true);
                        }else{
-                           $("input[name=giftno]").prop("checked",false);
+                           $("input[name=cpno]").prop("checked",false);
                        }
                 })
 
                 $("#delete").click(function(){
                     let checkBoxArr = [];
-                    if(confirm("쿠폰을 삭제하시겠습니까?")){
+                    if(confirm("좋아요를 삭제하시겠습니까?")){
                         
-                        $("input:checkbox[name=giftno]:checked").each(function(){
+                        $("input:checkbox[name=cpno]:checked").each(function(){
                             checkBoxArr.push($(this).val());
                         })
                         
@@ -479,13 +316,14 @@
                     }
                 })
                 
-                $("#paygo").click(function(){
-                    location.href="../finalView/결재폼.html";
+                $("#basket-go").click(function(){
+                    location.href="../finalView/답례품장바구니(end).html";
                 })
             })
             
           </script>
-
+        </main>
+       
     </div>
     <!-- 푸터바  인클루드-->
 	<!-- footer -->
