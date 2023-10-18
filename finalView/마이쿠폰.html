@@ -278,6 +278,7 @@
                 <br>
                 <div  class="CPbutton"> &nbsp;  &nbsp;  
                     <button type="button" id="delete" style="border-radius: 10px; background-color: red; width: 80px; height: 50px;">삭제하기</button>
+                    <button type="button" id="pay-go" style="float: right; border-radius: 10px; width: 80px; height: 50px;">적용하기</button>
                     <button type="button" id="basket-go" style="float: right; border-radius: 10px; width: 80px; height: 50px;">장바구니</button>
                 </div>
             </div>
@@ -286,6 +287,12 @@
         </div>
     
         <script>
+
+            $(function(){
+                $("#pay-go").click(()=>{
+                    location.href="../finalView/결재폼.html";
+                })
+            })
             $(function(){
                 $("#selectAll").click(function(){
                        if($(this).is(':checked')){
