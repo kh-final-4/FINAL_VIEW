@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>웨딩홀 신규등록 페이지</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<style>
+.outer {
+    width: 1200px;
+    height: 750px;
+    border: 3px solid orange;
+    background-color: rgba(240, 240, 240, 0.589);
+    margin: auto;
+}
+
+.enroll {
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    border: 2px solid gray;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+#enroll_cp{
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 650px;
+    margin-top: 50px;
+}
+.enroll input{
+    width: 99%;
+    height: 100%;
+    border: 0;
+    font-size: 15px;
+}
+#NOTICE_CONTENT{
+    resize: none;
+    width: 98%;
+    height: 98%;
+    border: 0;
+    margin-top: 5px;
+    font-size: 15px;
+}
+#enroll_cp td{
+    height: 40px;
+}
+#submit{
+    background-color: rgba(0, 128, 0, 0.781);
+    color: white;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+    border: white;
+    margin-left: 5px;
+}
+#reset{
+    background-color:red;
+    color: white;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+    border: white;
+    margin-right: 5px;
+}
+.btn_area button:hover{
+    cursor: pointer;
+    font-size: 20px;
+}
+#COUPON_NO{
+    width: 100%;
+    height: 100%;
+}
+</style>
+</head>
+<body>
+
+    <div class="enroll">
+        <form action="#" id="enroll_cp">
+            <h1 align="center" style="margin-top: 50px;">이벤트 게시판 등록</h1>
+            <br><br>
+            <table border="1">
+                <tr>
+                    <td><select name="COUPON_NO" id="COUPON_NO">
+                        <option value="1">오픈 이벤트</option>
+                        <option value="2">신규등록 이벤트</option>
+                        <option value="3">할로윈 이벤트</option>
+                    </select></td>
+                    <td>쿠폰번호 : 123, 할인금액 : 4000원, 기간 : 2023-10-17 ~ 2024-10-17</td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td><input type="text" name="NOTICE_TITLE" id="COUPON_VALUE" required placeholder="오픈기념 이벤트입니다."></td>
+                </tr>
+                <tr>
+                    <th width="150px">내용</th>
+                    <td width="500px"><textarea name="NOTICE_CONTENT" id="NOTICE_CONTENT" cols="30" rows="10" placeholder="웨어딩 오픈했다" required></textarea></td>
+                </tr>
+                <tr>
+                    <th>이벤트 시작 날짜</th>
+                    <td><input type="date" name="START_EVENT" id="START_EVENT"></td>
+                </tr>
+                <tr>
+                    <th>이벤트 종료 날짜</th>
+                    <td><input type="date" name="END_EVENT" id="END_EVENT"></td>
+                </tr>
+            </table>
+            <br><br>
+            <div class="btn_area" align="center">
+                <button id="reset" type="reset">초기화</button>
+                <button id="submit" type="submit">등록</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>웨딩홀 신규등록 페이지</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<style>
+.outer {
+    width: 1200px;
+    height: 750px;
+    border: 3px solid orange;
+    background-color: rgba(240, 240, 240, 0.589);
+    margin: auto;
+}
+
+.enroll {
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    border: 2px solid gray;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+#enroll_cp{
+    margin: auto;
+    /* border: 1px solid red; */
+    width: 650px;
+    margin-top: 50px;
+}
+input{
+    width: 99%;
+    height: 100%;
+    border: 0;
+    font-size: 15px;
+}
+#COUPON_CONTENT{
+    resize: none;
+    width: 98%;
+    height: 98%;
+    border: 0;
+    margin-top: 5px;
+    font-size: 15px;
+}
+#enroll_cp td{
+    height: 40px;
+}
+#submit{
+    background-color: rgba(0, 128, 0, 0.781);
+    color: white;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+    border: white;
+    margin-left: 5px;
+}
+#reset{
+    background-color:red;
+    color: white;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+    border: white;
+    margin-right: 5px;
+}
+.btn_area button:hover{
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+    <div class="enroll">
+        <form action="#" id="enroll_cp">
+            <h1 align="center" style="margin-top: 50px;">신규쿠폰제작</h1>
+            <br><br>
+            <table border="1">
+                <tr>
+                    <th width="150px">쿠폰에 대한 설명</th>
+                    <td width="500px"><textarea name="COUPON_CONTENT" id="COUPON_CONTENT" cols="30" rows="10" placeholder="웨어딩 오픈기념 이벤트 한정기간동안 답례품 할인쿠폰을 받으실 수 있습니다." required></textarea></td>
+                </tr>
+                <tr>
+                    <th>할인금액 설정(원 제외)</th>
+                    <td><input type="number" name="COUPON_VALUE" id="COUPON_VALUE" required placeholder="5000"></td>
+                </tr>
+                <tr>
+                    <th>쿠폰 시작 날짜</th>
+                    <td><input type="date" name="START_COUPON" required></td>
+                </tr>
+                <tr>
+                    <th>쿠폰 종료 날짜</th>
+                    <td><input type="date" name="END_COUPON" required></td>
+                </tr>
+            </table>
+            <br><br>
+            <div class="btn_area" align="center">
+                <button id="reset" type="reset">초기화</button>
+                <button id="submit" type="submit">등록</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

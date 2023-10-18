@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠폰 게시판</title>
+    <style>
+        div {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+
+        .outer {
+            width: 1180px;
+            height: 800px;
+            margin: auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+        }
+
+        .title {
+            font-size: 23px;
+            font-weight: 900;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f28123;
+            margin-top: 60px;
+        }
+        .benefit .content-layout .board-wrp .item-lst {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -27px -15px;
+        }
+
+        .cup {
+            width: 33.1%;
+            height: 287px;
+            /* background-color: #f28123; */
+            float: left;
+        }
+
+        .cupDetail {
+            width: 360px;
+            height: 231px;
+            margin-top: 27px;
+            margin-bottom: 27px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border: 1px solid #d4d4d4;
+            border-radius: 15px;
+            overflow: hidden; /* overflow hidden 추가 */
+            position: relative; /* 상대 위치 설정 */
+            cursor: pointer;
+        }
+       
+        .detailball {
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: white;
+            position: absolute; /* 상대 위치 설정 */
+            bottom: 90px; /* 아래에 배치 */
+            right: -25px; /* 오른쪽에 배치 */
+            border: 1px solid #d4d4d4;
+            transform: rotate(45deg);
+        }
+        .main{
+            width: 290px;
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 30px;
+            border-bottom: 2px dashed #d4d4d4;
+        }
+        .main>h1{
+            font-size: 40px;
+            margin: 0;
+            margin-left: 20px;
+            color: #f28123;
+        }
+        
+        .main_content{
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 290px;
+            height: 40px;
+        }
+        .main_date{
+            width: 290px;
+            height: 30px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .logo{
+            width: 22px;
+            height: 22px;
+            background: url(https://www.greencar.co.kr/static/media/icon_clock.4676aa877d2336712ced.svg);
+            margin-top: 3px;
+        }
+        .cupDetail:hover{
+            background-color: #f28123;
+            color: white;
+            
+        }
+        .cupDetail:hover .main>h1 {
+            color: white;
+        }
+        .page{
+            width: 1000px;
+            height: 50px;
+            margin: auto;
+            margin-top: 600px;
+        }
+        .body{
+            border: 1px solid #f0f0f0;
+            width: 880px;
+            height: 600px;
+            margin-top: 50px;
+            margin: auto;;
+        }
+        .body_title{
+            width: 800px;
+            height: 50px;
+            /* border: 1px solid red; */
+            border-bottom: 1px solid  gray;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .real_title{
+            /* border: 1px solid red; */
+            width: 660px;
+            float: left;
+            margin-top: 15px;
+        } 
+       .real_title>span{
+        font-weight: 800;
+        padding-left: 30px;
+        font-size: 20px;
+       }
+       .count{
+        float: left;
+        /* border: 1px solid black; */
+        margin-top: 25px;
+       }
+       #date{
+        margin-left: 20px;
+       }
+       .content {
+            width: 800px;
+            height: 350px;
+            border: 1px solid #f0f0f0;
+            margin: auto;
+            margin-top: 30px;
+            padding: 20px;
+            word-wrap: break-word; /* 단어가 content 요소의 너비를 벗어날 때 줄바꿈되도록 설정 */
+        }
+        .content>p{
+            font-size: 15px;
+        }
+        .btn{
+            margin-top: 30px;
+            margin-right: 20px;
+        }
+        #user{
+            margin-right: 20px;
+        }
+        #edit{
+            width: 80px;
+            height: 30px;
+            color: white;
+            background-color: gold;
+            border: 1px solid rgb(219, 187, 4);
+            font-weight: 900;
+            font-size: 14px;
+            
+        }
+        #delete{
+            width: 80px;
+            height: 30px;
+            color: white;
+            background-color: red;
+            border: 1px solid rgb(153, 3, 3);
+            font-weight: 900;
+            font-size: 14px;
+            
+        }
+       
+        #list{
+            width: 80px;
+            height: 30px;
+            color: white;
+            background-color: green;
+            border: 1px solid rgb(1, 66, 1);
+            font-weight: 900;
+            font-size: 14px;
+            
+        }
+        .userinfo{
+            /* border: 1px solid; */
+            width: 300px;
+            height: 30px;
+            float: right;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+        .down{
+            margin-top: 10px;
+        }
+        .down>button{
+            width: 300px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: #f28123;
+            color: white;
+            border: 1px solid #9c5216;
+            font-size: 25px;
+            font-weight: 900;
+        }
+        .down>button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="header">
+            <h2 class="title">&nbsp;&nbsp;쿠폰 게시판</h2>
+        </div>
+
+
+        <div class="body">
+
+            
+            <div class="body_title">
+                <div class="real_title">
+                    <span>웨어딩 런칭관련 소식입니다.</span>
+                </div>
+                <div class="count">
+                    <span id="date">2023-10-17</span>
+                </div>
+            </div>
+            <div class="userinfo">
+                <span>
+                    이벤트 기간 : 2023-10-17 ~ 2024-10-17
+
+                </span>
+            </div>
+            <div class="content">
+                <p> 여러분들의 성원에 힘입어 웨어딩이 런칭하게 되었습니다. 앞으로도 많은 관심 부탁드립니다.</p>
+            </div>
+            <div class="down" align="center">
+                <button>5000원 쿠폰 받기</button>
+            </div>
+            <div class="btn" align="right">
+                <button id="edit">수정하기</button>
+                <button id="delete">삭제하기</button>
+                <button id="list">목록으로</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    
+</body>
+</html>

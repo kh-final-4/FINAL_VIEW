@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠폰 게시판</title>
+    <style>
+        div {
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+
+        .outer {
+            width: 1180px;
+            height: 800px;
+            margin: auto;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+        }
+
+        .title {
+            font-size: 23px;
+            font-weight: 900;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f28123;
+            margin-top: 60px;
+        }
+        .benefit .content-layout .board-wrp .item-lst {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -27px -15px;
+        }
+
+        .cup {
+            width: 33.1%;
+            height: 287px;
+            /* background-color: #f28123; */
+            float: left;
+        }
+
+        .cupDetail {
+            width: 360px;
+            height: 231px;
+            margin-top: 27px;
+            margin-bottom: 27px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border: 1px solid #d4d4d4;
+            border-radius: 15px;
+            overflow: hidden; /* overflow hidden 추가 */
+            position: relative; /* 상대 위치 설정 */
+            cursor: pointer;
+        }
+       
+        .detailball {
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: white;
+            position: absolute; /* 상대 위치 설정 */
+            bottom: 90px; /* 아래에 배치 */
+            right: -25px; /* 오른쪽에 배치 */
+            border: 1px solid #d4d4d4;
+            transform: rotate(45deg);
+        }
+        .main{
+            width: 290px;
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 30px;
+            border-bottom: 2px dashed #d4d4d4;
+        }
+        .main>h1{
+            font-size: 40px;
+            margin: 0;
+            margin-left: 20px;
+            color: #f28123;
+        }
+        
+        .main_content{
+            margin-top: 20px;
+            margin-left: 30px;
+            width: 290px;
+            height: 40px;
+        }
+        .main_date{
+            width: 290px;
+            height: 30px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .logo{
+            width: 22px;
+            height: 22px;
+            background: url(https://www.greencar.co.kr/static/media/icon_clock.4676aa877d2336712ced.svg);
+            margin-top: 3px;
+        }
+        .cupDetail:hover{
+            background-color: #f28123;
+            color: white;
+            
+        }
+        .cupDetail:hover .main>h1 {
+            color: white;
+        }
+        .page{
+            width: 1000px;
+            height: 50px;
+            margin: auto;
+            margin-top: 600px;
+        }
+        #add{
+            float: right;
+            margin-right: 100px;
+            width: 90px;
+            height: 30px;
+            background-color: forestgreen;
+            border: 1px solid rgb(18, 75, 18);
+            color: white;
+            font-size: 15px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="header">
+            <h2 class="title">&nbsp;&nbsp;쿠폰 게시판</h2>
+            <button id="add">글작성</button>
+        </div>
+        <div class="content">
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="cup">
+                <div class="cupDetail">
+                    <div class="detailball"></div>
+                    <div class="main">
+                        <h1>5000원 할인</h1>
+                    </div>
+                    <div class="main_content">
+                        <h3>&nbsp;오픈기념이벤트로 기간한정 찾아주시는 모든 고객님께 드립니다.</h3>
+                    </div>
+                    <div class="main_date">
+                        <div class="logo">&nbsp;&nbsp;&nbsp;&nbsp;"2023.10.16~2023.10.20"</div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="page">
+             <ul class="pagination">
+                		<c:choose>
+                			<c:when test="${pi.currentPage eq 1 }">
+	                    		<li class="page-item disabled"><a class="page-link" href="" >Previous</a></li>
+                			</c:when>
+                			<c:otherwise>
+	                    		<li class="page-item"><a class="page-link" href="list.bo?cpage=${pi.currentPage - 1 }">Previous</a></li>
+                			</c:otherwise>
+	                    </c:choose>
+	                    
+	                    	<c:forEach var="p" begin="${pi.startPage }" end="${pi.endPage }">
+                    			<li class="page-item"><a class="page-link" href="list.bo?cpage=${p }">${p }</a></li>
+	                    	</c:forEach>
+	                    	
+	                    	<c:choose>
+	                    		<c:when test="${pi.currentPage eq pi.maxPage }">
+			                    	<li class="page-item disabled"><a class="page-link" href="">Next</a></li>
+	                    		</c:when>
+	                    		<c:otherwise>
+			                    	<li class="page-item"><a class="page-link" href="list.bo?cpage=${pi.currentPage + 1 }">Next</a></li>
+	                    		</c:otherwise>
+	                    	</c:choose>
+                </ul>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
