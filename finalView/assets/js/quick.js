@@ -7,14 +7,6 @@ $(function(){
         });  
         $(".pCount input").trigger("change");
     });
-    $('.close_btn>a').on('click', function(){
-        $('.menu_bg').hide(); 
-        $('.sidebar_menu').animate({
-            right: '-' + 20 + '%'
-        },function(){
-            $('.sidebar_menu').hide(); 
-        }); 
-    });
     // 예약 사이드 바
     $('.schedule').on('click', function(){
         $('.menu_bg_schedule').show(); 
@@ -27,7 +19,7 @@ $(function(){
     $('.close_btn>a').on('click', function(){
         $('.menu_bg').hide(); 
         $('.sidebar_menu').animate({
-            right: '-' + 20 + '%'
+            right: '-' + 25 + '%'
         },function(){
             $('.sidebar_menu').hide(); 
         }); 

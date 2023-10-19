@@ -86,6 +86,7 @@
 
 /* 사이드바 */
 .sidebar_menu {
+    width: 25% !important;
     overflow: scroll;
     overflow-x: hidden;
 }
@@ -133,6 +134,7 @@
 
 .sidebar_menu .pImg_area{
     width: 100px;
+    height: 100px;
 }
 
 /* .sidebar_menu .perPrice_area *{
@@ -170,7 +172,7 @@
 }
 .reservation_phone{
     margin-top: 100px;
-    text-align: right;
+    text-align: center;
 }
 
 .reservation_phone h5{
@@ -181,6 +183,9 @@
     margin-left: 5%;
 }
 
+.side_schedule table span{
+    font-size: small;
+}
 /* tbody td{
     padding-left: 20px;
 } */
