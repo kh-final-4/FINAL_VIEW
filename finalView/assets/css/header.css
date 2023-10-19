@@ -125,7 +125,7 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   }
   
   .mean-container .mean-nav ul li a {
-    padding: 0.5em 5%;
+    padding: 0.5em 5%;;
   }
   
   .mean-container .mean-nav ul li li a {
@@ -160,7 +160,7 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   .top-header-area.sepherate-header ul li > a, .top-header-area.sepherate-header .header-icons a {
     color: #051922;
   }
-  
+
   nav.main-menu ul ul.sub-menu li {
     display: block;
   }
@@ -172,6 +172,7 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
     font-weight: 600;
   }
   
+
   nav.main-menu ul li.current-list-item > a {
     color: #F28123;
   }
