@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- search style -->
+    <link rel="stylesheet" href="assets/css/search.css">
+
+</head>
+<body>
+    <table id="search_table">
+        <thead>
+            <tr id="search_title">
+                <th>
+                    <h5>결혼준비는 역시 Whereding</h5>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <nav id="tab_top_area">
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="border: none;">
+                            <button class="nav-link active" id="nav-wedding-tab" data-bs-toggle="tab" data-bs-target="#nav-wedding" type="button" role="tab" aria-controls="nav-wedding" aria-selected="true">웨딩</button>
+                            <button class="nav-link" id="nav-studio-tab" data-bs-toggle="tab" data-bs-target="#nav-studio" type="button" role="tab" aria-controls="nav-studio" aria-selected="false">스튜디오</button>
+                            <button class="nav-link" id="nav-dress-tab" data-bs-toggle="tab" data-bs-target="#nav-dress" type="button" role="tab" aria-controls="nav-dress" aria-selected="false">드레스</button>
+                            <button class="nav-link" id="nav-makeup-tab" data-bs-toggle="tab" data-bs-target="#nav-makeup" type="button" role="tab" aria-controls="nav-makeup" aria-selected="false">메이크업</button>
+                        </div>
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-wedding" role="tabpanel" aria-labelledby="nav-wedding-tab">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <input type="hidden" class="hidden_tab_area" value="wedding">
+                                            <h3>🤵Wedding Hall👰</h3>
+                                        </th>
+                                    </tr>
+                                    <!-- <tr>
+                                        <th colspan="4">
+                                            <p style="margin:10px;">***님께 딱 맞는 장소를 추천해드릴게요.</p>
+                                        </th>
+                                    </tr> 이원벨이 머리가 감고 댕겨라 -->
+                                </thead>
+                                <tbody class="mSearch wedding">
+                                    <!-- 검색 -->
+                                    <!-- <tr class="search">
+                                        <td colspan="4">
+                                            <span style="width: 300px;">
+                                                <input type="text" style="width: 260px;">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </td>
+                                    </tr> -->
+                                    <tr class="input_area">
+                                        <td class="address" colspan="4">
+                                            <input class="hidden_address" type="hidden"><!-- 서울특별시 강남구, 서울특별시 영등포구... -->
+                                            지역
+                                            <span  style="margin-right: 70px;"><input class="select_area w" type="text" placeholder="지역선택" readonly></span>
+
+                                            대관비
+                                            <span class="minPrice"><input type="number" placeholder="0" >만원</span>~&nbsp;
+                                            <span class="maxPrice"><input type="number" placeholder="100">만원</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="input_area">
+                                        <td colspan="4">
+                                            좌석
+                                            <!-- <span id="seat_avail" style="margin-right: 80px;"><input type="number">석</span> -->
+                                                <select id="seat_avail">
+                                                    <option value="100">100명 이하</option>
+                                                    <option value="101">101명 ~ 300명</option>
+                                                    <option value="301">301명 ~ 500명</option>
+                                                    <option value="500">500명 이상</option>
+                                                </select>
+                                            식대
+                                            <!-- 식대 -->
+                                            <span class="minPrice"><input type="number" placeholder="0">만원</span>~&nbsp;
+                                            <span class="maxPrice"><input type="number" placeholder="10">만원</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <input class="hidden_tag w" type="hidden">
+                                        <td colspan="3" class="selectTagArea">
+                                            <span class="taglist"># 호텔웨딩</span>
+                                            
+                                        </td>
+                                        <td class="find_tag">
+                                            <button type="button" class="btn btn-outline-secondary float-right">태그찾기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="next_prev_area">
+                                        <td colspan="4">
+                                            <a class="btn btn-outline-warning float-right" onclick="nextTab(this);">다음</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-studio" role="tabpanel" aria-labelledby="nav-studio-tab">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <input type="hidden" class="hidden_tab_area" value="studio">
+                                            <h3>📸STUDIO</h3>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="mSearch studio">
+                                    <tr class="input_area">
+                                        <td class="address" colspan="4">
+                                            <input class="hidden_address" type="hidden"><!-- 서울특별시 강남구, 서울특별시 영등포구... -->
+                                            지역
+                                            <span  style="margin-right: 70px;"><input class="select_area s" type="text" placeholder="지역선택" readonly></span>
+                                            
+                                            가격
+                                            <span class="minPrice"><input type="number" placeholder="0" >만원</span>~&nbsp;
+                                            <span class="maxPrice"><input type="number" placeholder="100">만원</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="input_area">
+                                        <td class="weekendYNArea" colspan="4">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input weekendYN" style="margin-right: 0px;" value=""><span style="vertical-align:10px; width: 120px; border: none; font-size: 17px;">주말영업여부</span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <input class="hidden_tag s" type="hidden">
+                                        <td colspan="3" class="selectTagArea">
+                                            <span class="taglist"># 호텔웨딩</span>
+                                            
+                                        </td>
+                                        <td class="find_tag">
+                                            <button type="button" class="btn btn-outline-secondary float-right">태그찾기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="next_prev_area">
+                                        <td colspan="2">
+                                            <a class="btn btn-outline-warning float-left" onclick="prevTab(this);">이전</a>
+                                        </td>
+                                        <td colspan="2">
+                                            <a class="btn btn-outline-warning float-right" onclick="nextTab(this);">다음</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-dress" role="tabpanel" aria-labelledby="nav-dress-tab">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <input type="hidden" class="hidden_tab_area" value="dress">
+                                            <h3>👗DRESS</h3>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="mSearch dress">
+                                    <tr class="input_area">
+                                        <td class="address" colspan="4">
+                                            <input class="hidden_address" type="hidden"><!-- 서울특별시 강남구, 서울특별시 영등포구... -->
+                                            지역
+                                            <span  style="margin-right: 70px;"><input class="select_area d" type="text" placeholder="지역선택" readonly></span>
+                                            
+                                            가격
+                                            <span class="minPrice"><input type="number" placeholder="0" >만원</span>~&nbsp;
+                                            <span class="maxPrice"><input type="number" placeholder="100">만원</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="input_area">
+                                        <td class="weekendYNArea" colspan="4">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input weekendYN" style="margin-right: 0px;" value=""><span style="vertical-align:10px; width: 120px; border: none; font-size: 17px;">주말영업여부</span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <input class="hidden_tag d" type="hidden">
+                                        <td colspan="3" class="selectTagArea">
+                                            <span class="taglist"># 호텔웨딩</span>
+                                            
+                                        </td>
+                                        <td class="find_tag">
+                                            <button type="button" class="btn btn-outline-secondary float-right">태그찾기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="next_prev_area">
+                                        <td colspan="2">
+                                            <a class="btn btn-warning float-left" onclick="prevTab(this);">이전</a>
+                                        </td>
+                                        <td colspan="2">
+                                            <a class="btn btn-warning float-right" onclick="nextTab(this);">다음</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-makeup" role="tabpanel" aria-labelledby="nav-makeup-tab">
+                            <table style="width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th colspan="4">
+                                            <input type="hidden" class="hidden_tab_area" value="makeup">
+                                            <h3>💄MAKEUP</h3>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="mSearch makeup">
+                                    <tr class="input_area">
+                                        <td class="address" colspan="4">
+                                            <input class="hidden_address" type="hidden"><!-- 서울특별시 강남구, 서울특별시 영등포구... -->
+                                            지역
+                                            <span  style="margin-right: 70px;"><input class="select_area m" type="text" placeholder="지역선택" readonly></span>
+                                            
+                                            가격
+                                            <span class="minPrice"><input type="number" placeholder="0" >만원</span>~&nbsp;
+                                            <span class="maxPrice"><input type="number" placeholder="100">만원</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="input_area">
+                                        <td class="weekendYNArea" colspan="4">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                  <input type="checkbox" class="form-check-input weekendYN" style="margin-right: 0px;" value=""><span style="vertical-align:10px; width: 120px; border: none; font-size: 17px;">주말영업여부</span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <input class="hidden_tag m" type="hidden">
+                                        <td colspan="3" class="selectTagArea">
+                                            <span class="taglist"># 호텔웨딩</span>
+                                        </td>
+                                        <td class="find_tag">
+                                            <button type="button" class="btn btn-outline-secondary float-right">태그찾기</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="next_prev_area">
+                                        <td colspan="2">
+                                            <a class="btn btn-outline-warning float-left" onclick="prevTab(this);">이전</a>
+                                        </td>
+                                        <td colspan="2">
+                                            <a class="btn btn-outline-warning float-right">검색</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    
+    
+    <div class="md md1">
+        <button class="close_tab"></button>
+        <div class="tab-area">
+            
+            <h3>지역선택</h3>
+            <div class="ltab">
+                <button class="ltablinks Seoul" onclick="openCity(event, 'Seoul');" id="defaultOpen">서울특별시</button>
+                <button class="ltablinks Gyeonggi" onclick="openCity(event, 'Gyeonggi')">경기도</button>
+                <button class="ltablinks" onclick="openCity(event, 'Incheon')">인천</button>
+                <button class="ltablinks" onclick="openCity(event, 'Busan')">부산</button>
+                <button class="ltablinks" onclick="openCity(event, 'Daegu')">대구</button>
+                <button class="ltablinks" onclick="openCity(event, 'gwangju')">광주</button>
+                <button class="ltablinks" onclick="openCity(event, 'Daejeon')">대전</button>
+                <button class="ltablinks" onclick="openCity(event, 'Ulsan')">울산</button>
+                <button class="ltablinks" onclick="openCity(event, 'Sejong')">세종</button>
+                <button class="ltablinks" onclick="openCity(event, 'Gangwon')">강원도</button>
+                <button class="ltablinks" onclick="openCity(event, 'NChungcheong')">충청북도</button>
+                <button class="ltablinks" onclick="openCity(event, 'SChungcheong')">충청남도</button>
+                <button class="ltablinks" onclick="openCity(event, 'NJeolla')">전라북도</button>
+                <button class="ltablinks" onclick="openCity(event, 'SJeolla')">전라남도</button>
+                <button class="ltablinks" onclick="openCity(event, 'NGyeongsang')">경상북도</button>
+                <button class="ltablinks" onclick="openCity(event, 'SGyeongsang')">경상남도</button>
+                <button class="ltablinks" onclick="openCity(event, 'Jeju')">제주도</button>
+            </div>
+            
+            <div id="Seoul" class="ltabcontent area">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">종로구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">중구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">용산구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">성동구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">광진구</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">동대문</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">중랑구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">용산구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">강북구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">도봉구</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">노원구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">은평구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">성북구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">서대문</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">마포구</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">양천구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">강서구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">구로구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">금천구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">영등포</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">동작구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">관악구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">서초구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">강남구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">송파구</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">강동구</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="Gyeonggi" class="ltabcontent area">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">수원시</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">성남시</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">고양시</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">안양시</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">부천시</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">광명시</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">평택시</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="Incheon" class="ltabcontent area">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">남구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">남동구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">동구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">부평구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">서구</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="selectCity" onclick="clickCity(event)">연수구</button></td>
+                            <td><button class="selectCity" onclick="clickCity(event)">중구</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="confirm_city">
+                <button class="btn btn-outline-warning" onclick="submitCity()">확인</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="md md2">
+        <button class="close_tab"></button>
+        <div class="tab_area">
+            <h3>태그</h3>
+            <div class="allTag_area">
+                <button class="btn btn-outline-secondary"># 호텔웨딩</button>
+                <button class="btn btn-outline-secondary"># 스몰웨딩</button>
+                <button class="btn btn-outline-secondary"># 일반웨딩</button>
+                <button class="btn btn-outline-secondary"># 하우스웨딩</button>
+                <button class="btn btn-outline-secondary"># 전통혼례</button>
+                <button class="btn btn-outline-secondary"># 호텔웨딩</button>
+                <button class="btn btn-outline-secondary"># 스몰웨딩</button>
+                <button class="btn btn-outline-secondary"># 일반웨딩</button>
+                <button class="btn btn-outline-secondary"># 하우스웨딩</button>
+                <button class="btn btn-outline-secondary"># 전통혼례</button>
+                <button class="btn btn-outline-secondary"># 호텔웨딩</button>
+                <button class="btn btn-outline-secondary"># 스몰웨딩</button>
+                <button class="btn btn-outline-secondary"># 일반웨딩</button>
+                <button class="btn btn-outline-secondary"># 하우스웨딩</button>
+                <button class="btn btn-outline-secondary"># 전통혼례</button>
+            </div>
+            <div class="confirm_tag">
+                <button class="btn btn-outline-warning" onclick="submitTag()">확인</button>
+            </div>
+
+        </div>
+    </div>
+                
+
+
+
+
+	<!-- jquery -->
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+    <!-- search js -->
+    <script src="assets/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+
+
+      
+</body>
+</html>
