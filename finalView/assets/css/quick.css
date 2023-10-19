@@ -94,6 +94,9 @@
     height: 25px;
 }
 
+.sidebar_menu h3{
+    margin: 5% 5%;
+}
 .sidebar_menu h4{
     margin: 5% 5%;
 }
@@ -159,3 +162,25 @@
     text-align: right;
     margin: 0% 5%;
 }
+
+/* 예약 사이드바 */
+.sidebar_menu .reservation_Total{
+    text-align: right;
+    margin: 0% 5%;
+}
+.reservation_phone{
+    margin-top: 100px;
+    text-align: right;
+}
+
+.reservation_phone h5{
+    padding-top: 10px;
+}
+
+.allCheck{
+    margin-left: 5%;
+}
+
+/* tbody td{
+    padding-left: 20px;
+} */

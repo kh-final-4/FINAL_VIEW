@@ -1,12 +1,29 @@
 $(function(){
     // 사이드 바
     $('.basket').on('click', function(){
-        $('.menu_bg').show(); 
-        $('.sidebar_menu').show().animate({
+        $('.menu_bg_basket').show(); 
+        $('.side_basket').show().animate({
             right:0
         });  
         $(".pCount input").trigger("change");
     });
+    $('.close_btn>a').on('click', function(){
+        $('.menu_bg').hide(); 
+        $('.sidebar_menu').animate({
+            right: '-' + 20 + '%'
+        },function(){
+            $('.sidebar_menu').hide(); 
+        }); 
+    });
+    // 예약 사이드 바
+    $('.schedule').on('click', function(){
+        $('.menu_bg_schedule').show(); 
+        $('.side_schedule').show().animate({
+            right:0
+        });  
+        $(".pCount input").trigger("change");
+    });
+
     $('.close_btn>a').on('click', function(){
         $('.menu_bg').hide(); 
         $('.sidebar_menu').animate({
@@ -69,7 +86,7 @@ $(function(){
 
     // check 박스 클릭시
     $(".basket_item").change(function(){
-        console.log("zzz")
+        // console.log("zzz")
         var checked = $(this).prop('checked');
         let price = $(this).closest("table").find(".total").text().replace(/,/g, '');
         if(checked){
@@ -81,10 +98,37 @@ $(function(){
         let total = 0;
         for (var i = 0; i <a1.length; i++) {
             total += Number(a1[i].innerHTML.replace(/,/g, ''))
-            console.log(total)
+            // console.log(total)
         }
         totalPrice = total
         $(".finalTotal").text("총금액 : " + total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + "원")
+    })
+
+    // 예약 사이드바 모두 선택
+    $(document).ready(function(){
+        $(".side_schedule .allCheck input").click(function(){
+        // console.log($(".allCheck input").prop("checked"));
+
+        if($(".side_schedule .allCheck input").prop("checked")){
+            $(".side_schedule .basket_item").prop("checked",true).trigger("change");
+        }else{
+            $(".side_schedule .basket_item").prop("checked",false).trigger("change");
+        }
+        
+        })
+
+        $(".side_schedule").click(function(){
+            // console.log($(".side_schedule .basket_item:checked").length)
+            // console.log($(".side_schedule .basket_item").length)
+            let checkNum =$(".side_schedule .basket_item:checked").length;
+            if($(".side_schedule .basket_item:checked").length==$(".side_schedule .basket_item").length){
+                $(".side_schedule .allCheck input").prop("checked",true)
+            }else{
+                $(".side_schedule .allCheck input").prop("checked",false)
+            }
+
+            $(".reservation_Total").text(checkNum+"개 선택");
+        })
     })
 
 
