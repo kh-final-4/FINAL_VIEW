@@ -172,11 +172,12 @@
 }
 .reservation_phone{
     margin-top: 100px;
-    text-align: center;
+    text-align: left;
 }
 
 .reservation_phone h5{
     padding-top: 10px;
+    padding-left: 5%;
 }
 
 .allCheck{
