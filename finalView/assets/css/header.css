@@ -70,6 +70,7 @@ ul.navbar-nav li.nav-item a.nav-link, ul.navbar-nav li.nav-item.active a.nav-lin
   nav.main-menu ul ul.sub-menu li {
     display: block;
     text-align: left;
+    padding: 10px;
   }
   
   nav.main-menu ul ul.sub-menu li a {
