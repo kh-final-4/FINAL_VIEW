@@ -1,7 +1,7 @@
 $(function(){
     // 사이드 바
     $('.basket').on('click', function(){
-        $('.menu_bg_basket').show(); 
+        $('.menu_bg').css("display","block") 
         $('.side_basket').show().animate({
             right:0
         });  
@@ -9,7 +9,7 @@ $(function(){
     });
     // 예약 사이드 바
     $('.schedule').on('click', function(){
-        $('.menu_bg_schedule').show(); 
+        $('.menu_bg').show(); 
         $('.side_schedule').show().animate({
             right:0
         });  
@@ -17,7 +17,7 @@ $(function(){
     });
 
     $('.close_btn>a').on('click', function(){
-        $('.menu_bg').hide(); 
+        $('.menu_bg').css("display","none"); 
         $('.sidebar_menu').animate({
             right: '-' + 25 + '%'
         },function(){
