@@ -83,7 +83,7 @@
 	<script type="text/javascript" src="assets/js/quick.js"></script> 
 
 	<!-- 사이드바 -->
-	<div class="menu_bg_basket"></div>
+	<div class="menu_bg"></div>
 	<div class="sidebar_menu side_basket">
 		<div class="close_btn"><a href="#">       
 			<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
@@ -178,7 +178,6 @@
 		</form>
 	</div>
 	<!-- 예약 사이드바 -->
-	<div class="menu_bg_schedule"></div>
 	<div class="sidebar_menu side_schedule">
 		<div class="close_btn"><a href="#">       
 			<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjMuOTU0IDIxLjAzbC05LjE4NC05LjA5NSA5LjA5Mi05LjE3NC0yLjgzMi0yLjgwNy05LjA5IDkuMTc5LTkuMTc2LTkuMDg4LTIuODEgMi44MSA5LjE4NiA5LjEwNS05LjA5NSA5LjE4NCAyLjgxIDIuODEgOS4xMTItOS4xOTIgOS4xOCA5LjF6Ii8+PC9zdmc+">
@@ -354,5 +353,13 @@
 			<span><h5 class="reservation_Total">0개 선택</h5></span><br>
 			<button class="btn btn-outline-secondary" type="submit">예약하기</button>
 	</div>
+
+	<script>
+		(function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+	  
+		ChannelIO('boot', {
+		  "pluginKey": "934a239f-155d-4a7e-a439-29e60d3ed745"
+		});
+	  </script>
 </body>
 </html>
