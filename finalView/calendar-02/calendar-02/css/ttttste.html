@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  
+<!-- kakao 지도 api (+ services와 clusterer, drawing 라이브러리 불러오기) -->
+<!-- 
+@libraries 설명 for kakao 
+	clusterer: 마커를 클러스터링 할 수 있는 클러스터러 라이브러리 입니다.
+	services: 장소 검색 과 주소-좌표 변환 을 할 수 있는 services 라이브러리 입니다.
+	drawing: 지도 위에 마커와 그래픽스 객체를 쉽게 그릴 수 있게 그리기 모드를 지원하는 drawing 라이브러리 입니다.
+-->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b7706a53c60198a30475a97398b6f325&libraries=services,clusterer,drawing"></script>
+
+<!-- style -->
+<style>
+	.container{  overflow: hidden; }
+	.container { overflow: hidden; width:100%; max-width: 500px; margin:40px auto;  }
+	.container .evt-map{ width:100%; height:300px; border:solid 1px #eee; }
+
+</style>
+
+<!-- 지도를 띄울 Container -->
+<div class="container">
+	<div class="group">
+		<h1>지도</h1>
+		<div class="evt-map" id="map"></div>
+	</div>
+</div>
+
+<!-- script -->
+<script>
+	var map = {
+		item : {},
+
+		// 맵 로드
+		load : function(id, options){
+			var thisObj = this;
+			if (typeof id == 'undefined'){ return false; }
+
+			// 옵션이 없을 경우 기본값 정의
+			if(typeof options == 'undefined'){ options = {};}
+
+			// 지도의 옵션 초기화
+			if(typeof options.lat =='undefined'){ options.lat = 33.450701;}
+			if(typeof options.lng =='undefined'){ options.lng = 126.570667;}
+			if(typeof options.level =='undefined'){ options.level = 3;}
+
+			// 맵 옵션
+			var mapOptions = {
+				center: new kakao.maps.LatLng(options.lat, options.lng), // 지도의 중심좌표
+				level: options.level // 지도의 확대 레벨				
+			}
+
+			// 지도 생성
+			thisObj.item[id] = new kakao.maps.Map(document.getElementById(id),mapOptions);
+
+			// 마커 생성
+			var marker = new kakao.maps.Marker({
+			    position: new kakao.maps.LatLng(options.lat, options.lng)
+			});		
+
+			// 마커를 적용
+			marker.setMap(thisObj.item[id]);
+		},
+	};
+	$(document).ready(function(e){
+		map.load('map',{});
+	});
+</script>
+</body>
+</html>
